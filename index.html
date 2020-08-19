@@ -438,7 +438,7 @@
                <textarea class="contact__textarea focusable" title="Message" type="text" tabindex="-1" name="Message"></textarea>
                <div class="around">
                  <div class="g-recaptcha" data-sitekey="6LcoGsEZAAAAAB8GEyUrFzMWkAWnC-Ol3jdFiCQm"></div>
-      
+
 
                <button class="contact__button focusable" value="Submit" tabindex="-1">
                <span class="contact__letter"></span>
@@ -457,7 +457,21 @@
       <a class="body-piece__link inline-link sign-in-link" href="https://wesdaxdemo.wesdemo.com/Default.aspx" tabindex="0">Already have an account? Sign in</a>
       <script type="text/javascript" src="graphics-scripts/menu.min.js"></script>
       <script type="text/javascript" src="graphics-scripts/script.min.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script>
+  const forms = document.querySelectorAll('div.g-recaptcha');
+forms.forEach(form=> {
+    const formParentElement = form.parentElement;
+
+    formParentElement.addEventListener("submit", e => {
+        if (grecaptcha.getResponse() === '') {
+            e.preventDefault();
+            alert('Please check the recaptcha');
+        }
+    }, false)
+});
+</script>
 
    </body>
 </html>
