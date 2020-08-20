@@ -1332,7 +1332,7 @@ pre {
 .BRFSSbtn:hover {
     background-image: url(assets/BRFSS_button_hover.svg);
 }
-.contact__letter::after {
+/* .contact__letter::after {
     content: "";
     display: inline-block;
     width: 2.2vw;
@@ -1341,7 +1341,7 @@ pre {
     background-repeat: no-repeat;
     margin: 1.4vw 6vw;
     transition: all 0.4s;
-}
+} */
 .login__input,
 .login__label {
     display: block;
@@ -1675,15 +1675,24 @@ pre {
   overflow:visible !important
 }
 
+.column2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow:visible !important
+}
+
 
 .across {
   display: flex;
   justify-content:space-between;
   align-items: center;
-  overflow:visible !important
+  overflow:visible !important;
+  width: 100%;
 }
 
 .across2 {
+  margin-top:1em;
   display: flex;
   justify-content:space-between;
   align-items: flex-start;
@@ -1691,8 +1700,8 @@ pre {
 }
 
 
-#ebcaptchatext {
-  margin-right:1em;
+#ebcaptchainput {
+      min-width: 255px;
 }
 
 .sendIt {
@@ -1705,12 +1714,13 @@ pre {
 }
 
 .white {
-  color:white;
-  font-size:24px;
-  margin-top:0em;
+    color: white;
+    font-size: 25px;
+    margin-top: 0em;
+    padding-left: 5px;
 }
 .fa-arrow-right {
   margin-left:.3em;
-  margin-top:.3em;
-  font-size:40px !important;
+  margin-top:.5em;
+  font-size:30px !important;
 }
