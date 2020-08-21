@@ -1704,9 +1704,9 @@ pre {
       min-width: 255px;
 }
 
-.sendIt {
+/* .sendIt {
   opacity:.5
-}
+} */
 
 .sendIt i {
   font-size:60px;
